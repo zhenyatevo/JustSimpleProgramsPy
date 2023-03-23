@@ -1,0 +1,17 @@
+def swapColumns(n, i, j):
+    Ar = []
+    for k in range(n):
+        Ar.append(list(map(int, input().split())))
+
+    for c in Ar:
+        print(c)
+
+    for k in range(0, n):
+        buf = Ar[k][i]
+        Ar[k][i], Ar[k][j] = Ar[k][j], buf
+    return Ar
+
+n, i, j = map(int, input().split(" "))
+print(n, i, j)
+for c in swapColumns(n, i, j):
+    print(c)
