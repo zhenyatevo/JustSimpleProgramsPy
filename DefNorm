@@ -1,0 +1,9 @@
+import math
+def norm(v):
+    res = 0
+    for i in v:
+        res += int(i) ** 2
+    return int(math.sqrt(res))
+
+vektor = map(int,input().split(" "))
+print(norm(vektor))
